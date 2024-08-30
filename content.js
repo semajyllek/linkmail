@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Functionality to display the email on hover
 document.addEventListener('mouseover', function(event) {
 	const target = event.target;
@@ -32,6 +33,10 @@ document.addEventListener('mouseover', function(event) {
   
   // Listener to handle messages from background.js for copying email addresses
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+=======
+// Listener to handle messages from background.js for copying email addresses
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+>>>>>>> befcf7f (initial commit for linkmail chrome extension)
 	if (request.action === "copyEmail" && request.email) {
 	  // Use the Clipboard API to write the email to the clipboard
 	  navigator.clipboard.writeText(request.email).then(() => {
@@ -41,5 +46,9 @@ document.addEventListener('mouseover', function(event) {
 		alert('Failed to copy email address');
 	  });
 	}
+<<<<<<< HEAD
   });
   
+=======
+  });
+>>>>>>> befcf7f (initial commit for linkmail chrome extension)
