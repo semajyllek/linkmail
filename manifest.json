@@ -1,0 +1,17 @@
+{
+	"manifest_version": 3,
+	"name": "Hover Email Viewer",
+	"version": "1.2",
+	"description": "Displays the recipient email address when hovering over 'mailto:' links and allows copying the email address.",
+	"permissions": ["contextMenus", "clipboardWrite", "activeTab"],
+	"background": {
+	  "service_worker": "background.js"
+	},
+	"content_scripts": [
+	  {
+		"matches": ["<all_urls>"],
+		"js": ["content.js"],
+		"run_at": "document_end"
+	  }
+	]
+  }
